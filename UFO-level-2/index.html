@@ -32,12 +32,24 @@
             <div class="panel panel-default">
               <div class="panel-heading">Filter Search</div>
               <div class="panel-body">
-                <form>
+                <form id ="form">
                   <div class="form-group">
                     <ul class="list-group" id="filters">
                       <li class="filter list-group-item">
-                        <label for="date">Enter a Date</label>
-                        <input class="form-control" id="datetime" type="text" placeholder="1/11/2011">
+                        <div>
+                          <label for="date">Search Query</label>
+                          <input class="form-control" id="datetime" type="text" placeholder="Search for Event">
+                          <button id="search-button" type="button" class="btn btn-default">Enter</button>
+                        </div>
+                        <label for="condition">Filter by ....</label>
+                        <select class = "form-control" id = "filter-by">
+                          <option value = "datetime">Date</option>
+                          <option value="state">State</option>
+                          <option value = "country">Country</option>
+                          <option value = "shape">Shape</option>t
+                          <option value = "durationMinutes">Duration(min)</option>
+                        </select>
+                        <button id = "add-condition-btn" type = "submit" class="btn btn-default"><u>Add Search Criteria</u></button>
                       </li>
                     </ul>
                   </div>
@@ -61,7 +73,7 @@
                   <th class="table-head">Comments</th>
                 </tr>
               </thead>
-              <tbody></tbody>
+              <tbody class="table_info"></tbody>
             </table>
           </div>
         </div>
